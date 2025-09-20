@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tien Long Tu | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Wrapper with background color for the MQL5 widget -->
+<div class="widget-container">
+    <a target="_blank" href="https://mql5.com/8ck7q" title="Download Average Session Range technical indicator from MQL5 Market">
+        <img src="https://www.mql5.com/en/market/widget/121071/mid?f=1" 
+             alt="Buy Average Session Range customer indicator in the store selling algo trading systems" 
+             loading="lazy">
+    </a>
+</div>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#My Websites">Websites</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container home-content">
+            <span>Hello, I'm Tien Long Tu</span>
+            <p>I'm a passionate forex developer</p>
+            <a href="#products" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="profile-picture">
+                <img src="IMG_7133.JPG" alt="Profile Picture">
+            </div>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Developing indicators since 2023, I consider myself an adept indicator developer from Vietnam. Since embarking on this journey, I have dedicated myself to mastering the intricacies of market analysis and indicator development...</p>
+    
+                    <p>I understand that no system is without its flaws, and all strategies will face challenges and periods of losses...</p>
+                    
+                    <p>Through continuous learning and adaptation, I strive to improve the reliability and effectiveness of my indicators...</p>
+                    
+                    <p>My goal is to develop indicators that not only withstand market fluctuations but also empower traders to make informed decisions with confidence...</p>                    
+                </div>
+            </div>
+            <h2>Known programming languages</h2>
+            <div class="language-buttons">
+                <a href="https://www.python.org/" class="circle-button"></a>
+                <a href="https://www.r-project.org/" class="circle-button1"></a>
+                <a href="https://docs.mql4.com/basis" class="circle-button2"></a>
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Load JSON and update product counts -->
+    <script>
+        // Function to fetch and update counts from the JSON file
+        fetch('name_counts.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update HTML with product counts
+                document.getElementById('product1-count').innerText = Number(data['Session Average Date Range MT5']) + Number(data['Session Average Date Range MT4'])|| 0;
+                document.getElementById('product2-count').innerText =  Number(data['Average Session Range']) + Number(data['Average Session Range MT4'])|| 0;
+                document.getElementById('product3-count').innerText = Number(data['Symbol Swap Panel MT4']) + Number(data['Symbol Swap Panel'])|| 0;
+                document.getElementById('product4-count').innerText = Number(data['Session Expected Risk Date Range Analyzer']) + Number(data['Session Expected Risk Date Range Analyzer MT4'])|| 0;
+                document.getElementById('product5-count').innerText =  Number(data['Session Standard Deviation Date Range Analyzer']) + Number(data['Session Standard Deviation Date Range Analyzer MT4'])|| 0;
+            })
+            .catch(error => console.log('Error loading JSON:', error));
+    </script>
+
+    <section id="products">
+        <div class="container">
+            <h2>Products</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Average Session Range</h3>
+                    <p class="p1">Calculate and Average the Sessions High-Low Range of Specific Time Sessions Over Multiple Days.</p>
+                    <p class="p2">Times Used: <span id="product2-count">0</span></p> <!-- Display the count here -->
+                    <a href="https://www.mql5.com/en/market/product/121626" target="_blank" class="link-button2">MT4</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.mql5.com/en/market/product/121071" target="_blank" class="link-button1">MT5</a>
+                        <!-- Button to read more in a new tab -->
+                        <p><a href="https://www.mql5.com/en/blogs/post/758636" target="_blank" class="read-more-btn">Read More</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Session Average Date Range </h3>
+                    <p class="p1">Analyze and average the low - high of specific trading sessions within custom date ranges, offering insights into price movements and market behavior over selected periods.</p>
+                    <p class="p2">Times Used: <span id="product1-count">0</span></p> <!-- Display the count here -->
+                    <a href="https://www.mql5.com/en/market/product/121860" target="_blank" class="link-button2">MT4</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.mql5.com/en/market/product/120885" target="_blank" class="link-button1">MT5</a>
+                    <!-- Button to read more in a new tab -->
+                    <p><a href="https://www.mql5.com/en/blogs/post/758764" target="_blank" class="read-more-btn">Read More</a></p>
+                    
+                </div>
+                <div class="project-card">
+                    <h3>Session Standard Deviation Date Range Analyzer</h3>
+                    <p class="p1">Session Standard Deviation Date Range Analyzer: Evaluate the standard deviation of each bar's price (high, low, close, open, weighted, median, and typical) within defined trading sessions and date ranges, providing detailed insights into price volatility and market behavior.</p>
+                    <p class="p2">Times Used: <span id="product5-count">0</span></p> <!-- Display the count here -->
+                    <a href="https://www.mql5.com/en/market/product/122260" target="_blank" class="link-button2">MT4</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.mql5.com/en/market/product/122236" target="_blank" class="link-button1">MT5</a>
+                    <!-- Button to read more in a new tab -->
+                    <p><a href="https://www.mql5.com/en/blogs/post/759108" target="_blank" class="read-more-btn">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Session Expected Risk Date Range Analyzer</h3>
+                    <p class="p1">Analyzes price data across specified date ranges to provide detailed insights into financial risk and volatility, using each bar's price metrics for accurate risk assessment.</p>
+                    <p class="p2">Times Used: <span id="product4-count">0</span></p> <!-- Display the count here -->
+                    <a href="https://www.mql5.com/en/market/product/122259" target="_blank" class="link-button2">MT4</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.mql5.com/en/market/product/122240" target="_blank" class="link-button1">MT5</a>
+                        <!-- Button to read more in a new tab -->
+                        <p><a href="https://www.mql5.com/en/blogs/post/759107" target="_blank" class="read-more-btn">Read More</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Symbol Swap Panel</h3>
+                    <p class="p1">Switchs the active symbol on your chart while simultaneously adding the new symbol to Market Watch. This tool ensures seamless integration and access to real-time market data, optimizing your trading workflow.</p>
+                    <p class="p2">Times Used: <span id="product3-count">0</span></p> <!-- Display the count here -->
+                    <a href="https://www.mql5.com/en/market/product/122620" target="_blank" class="link-button2">MT4</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.mql5.com/en/market/product/122618" target="_blank" class="link-button1">MT5</a>
+                    <!-- Button to read more in a new tab -->
+                    <p><a href="https://www.mql5.com/en/market/product/122620" target="_blank" class="read-more-btn">Read More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Last update section -->
+<section id="products">
+    <div class="container">
+        <p id="last-update">Last update: </p>
+    </div>
+</section>
+
+<script>
+    // Function to format and display the current date and time
+    function updateLastUpdate() {
+        const now = new Date();
+        const formattedDate = now.toLocaleDateString('en-GB'); // Formats as DD/MM/YYYY
+        const formattedTime = now.toLocaleTimeString('en-GB'); // Formats as HH:MM:SS
+        document.getElementById('last-update').textContent = `Last update: ${formattedDate} ${formattedTime}`;
+    }
+
+    // Call the function to update the "Last update" text
+    updateLastUpdate();
+</script>
+
+
+    <!-- Button to trigger the CSV download -->
+    <a href="cleaned_market_report.csv" download="market-report.csv">
+        <button class="download-btn">Download Market Report</button>
+    </a>
+    
+    <!-- Copy to clipboard function -->
+    <script>
+        // Function to copy email to clipboard
+        function copyEmail() {
+            const email = "longtu290@gmail.com";
+            navigator.clipboard.writeText(email).then(function() {
+                // Display the success message
+                const successMessage = document.getElementById('copy-success');
+                successMessage.style.display = 'block';
+                setTimeout(() => {
+                    successMessage.style.display = 'none'; // Hide the message after 2 seconds
+                }, 2000);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>I'm available for freelance projects and full-time positions. Let's work together!</p>
+            <!-- Button to copy the email address -->
+            <a onclick="copyEmail()" class="btn">Copy Email</a>
+            <p id="copy-success" style="display:none; color:green;">Copy to the clipboard!</p>
+        </div>
+    </section>
+
+    <!-- My Websites Section -->
+    <section id="My Websites">
+        <div class="container">
+            <!-- Text as a clickable link that looks like a button -->
+            <a href="https://www.mql5.com/en/users/longtu290" target="_blank" class="link-button">My MQL5 Website</a>
+            <span class="separator1">|</span>
+            <a href="https://github.com/longtu290" target="_blank" class="link-button">My Github</a>
+            <span class="separator1">|</span>
+            <a href="https://www.linkedin.com/in/tiến-long-từ-a265a2297" target="_blank" class="link-button">My Linkedin</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tien Long Tu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
